@@ -1,7 +1,9 @@
+require('dotenv').config()
 const express = require('express')
 const dbConfig = require('./config/mongodb.config')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+
 
 const app = express()
 
