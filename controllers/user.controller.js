@@ -1,6 +1,6 @@
 const User = require('../models/user.model')
 const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 exports.signin = async (req, res) => {
     if (!req.body.username) {

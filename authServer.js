@@ -3,6 +3,8 @@ const express = require('express')
 const dbConfig = require('./config/mongodb.config')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
+var cors = require('cors');
+
 let port = process.env.PORT || 4000
 
 
@@ -10,6 +12,7 @@ const app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 mongoose.Promise = global.Promise
 
